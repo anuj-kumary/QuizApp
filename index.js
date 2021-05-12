@@ -17,9 +17,9 @@ function play(question,answer){
   if(userQuestion.toUpperCase() === answer.toUpperCase()){
     console.log("right");
     score = score+1;
-    console.log("Your current Score is " +score);
+    console.log(chalk.green("Your current Score is " +score));
   }else{
-    console.log("wrong");
+    console.log(chal.red("wrong"));
     //score = score-1;
     console.log("Your current Score is " +score);
   }
@@ -53,13 +53,9 @@ for(var i=0;i<=2;i++){
 if(score === 3){
   console.log(chalk.bgRedBright("Welcome to Level 1!"))
   for(var i=3;i<questions.length;i++){
-  //var currentQuestion = (questions[i]);
  play(questions[i].question,questions[i].answer);
 }
 }
-
-
-
 
 console.log("Your Score is " +score);
 
